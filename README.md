@@ -113,19 +113,19 @@ The script for training is located on [app/models/training.py](app/models/traini
 ---
 **NOTE**
 
-It is very important that the datasets are in the [app/models/data](app/models/data) folder before running the [app/models/traning.py](app/models/traning.py) script.
+It is very important the datasets are stored in the [app/models/data](app/models/data) folder before running the [app/models/traning.py](app/models/traning.py) script.
 
 ---
 
-After the articles datasets are stored in [app/models/data](app/models/data), got to [app/](app/) and run
+After the articles datasets are stored in [app/models/data](app/models/data),  run
 ```bash
-python models/training.py
+python app/models/training.py
 ```
 It will generate two files in the folder [app/models/](app/models/)], `tf_idf` and `vectorizer`, the models.
 
 ## Tests <a name="tests"></a>
 
-Go to the root folder [/](/) and run
+Top run the test just run
 ```bash
 py.test
 ```
