@@ -1,4 +1,14 @@
 # Graphite test project
+## Table of contents  
+- [Overview](#overview)
+- [TF-IDF endpoint](#tfidfendpoint)
+- [Installation](#build)
+- [Tests](#tests)
+- [Run application locally](#running)
+- [References](#references)
+
+## Overview <a name="overview"></a>
+
 This application receive and url and returns the terms with the highest TF-IDF on the web page.
 
 This application was developed using Flask and is supported by two important topics, the web scraper and the tfidf model. The web scraper takes and url and returns the text of the entire page while the tf-idf model is used to calculate the tf-idf features for the article.
@@ -12,14 +22,6 @@ A(Client) -- http Request --> B(Flask App)
 B(Flask App) --> C(Web Scraper)
 B(Flask App) --> D(TF-IDF Model)
 ```
-## Table of contents  
-- [TF-IDF endpoint](#tfidfendpoint)
-- [Success Response](#successresponse)
-- [Error response](#errorresponse)
-- [Build](#build)
-- [Running Tests](#tests)
-- [running](#running)
-- [References](#reference)
 
 
 ## TF-IDF endpoint <a name="tfidfendpoint"></a>
@@ -50,7 +52,7 @@ B(Flask App) --> D(TF-IDF Model)
 }
 ```
 
-### Success Response <a name="successresponse"></a>
+### Success Response
 
 **Code** : `200 OK`
 
@@ -71,7 +73,7 @@ B(Flask App) --> D(TF-IDF Model)
 }
 ```
 
-### Error Response <a name="errorresponse"></a>
+### Error Response
 
 **Condition** : If 'username' and 'password' combination is wrong.
 
@@ -86,7 +88,7 @@ B(Flask App) --> D(TF-IDF Model)
 ```
 
 
-## Build <a name="build"></a>
+## Installation <a name="installation"></a>
 This project is developed using [python3.8](https://www.python.org/downloads/release/python-380/).
 
 First, you should create an isolate python environment
@@ -105,7 +107,7 @@ pip install -r requirements.txt
 It is very important that the datasets are in the [/app/models/data](/app/models/data) folder before running the [/app/models/traning.py](/app/models/traning.py) script.
 
 ---
-## Running tests <a name="tests"></a>
+## Tests <a name="tests"></a>
 Go to the root folder [/](/) and run
 ```bash
 py.test
@@ -120,7 +122,7 @@ then, the flask server should be running on [http://127.0.0.1:5000](http://127.0
 
 
 
-## References <a name="reference"></a>
+## References <a name="references"></a>
  - [Flask](https://flask.palletsprojects.com/en/2.1.x/)
  - [Sklearn TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)
  - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
