@@ -48,8 +48,8 @@ B(Flask App) --> D(TF-IDF Model)
 
 ```json
 {
-    "username": "https://en.wikipedia.org/wiki/Donald_Trump",
-    "password": "2"
+    "url": "https://en.wikipedia.org/wiki/Donald_Trump",
+    "limit": "2"
 }
 ```
 
@@ -84,7 +84,7 @@ B(Flask App) --> D(TF-IDF Model)
 
 ```json
 {
-    "error": "Invalid URL: Missing parameters"
+    "error": "Invalid URL"
 }
 ```
 
