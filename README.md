@@ -1,5 +1,6 @@
 # Graphite test project
 ## Table of contents  
+
 - [Overview](#overview)
 - [TF-IDF endpoint](#tfidfendpoint)
 - [Installation](#installation)
@@ -16,7 +17,7 @@ This application was developed using Flask and is supported by two important top
 
 The tf-idf model was trained using the [sklearn TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) on a large dataset of newspaper articles that falls between the years of 2016 and July 2017.
 
-The following graphic shows the components of the application.
+The following graphic shows the application components.
 ```mermaid
 graph LR
 A(Client) -- http request --> B(Flask App)
@@ -90,6 +91,7 @@ B(Flask App) --> D(TF-IDF Model)
 
 
 ## Installation <a name="installation"></a>
+
 This project is developed using [python3.8](https://www.python.org/downloads/release/python-380/).
 
 First, you should create an isolate python environment
@@ -103,21 +105,31 @@ pip install -r requirements.txt
 ```
 
 ## Training <a name="training"></a>
-The training 
-You can download the articles datasets from [https://www.kaggle.com/datasets/snapcrack/all-the-news](https://www.kaggle.com/datasets/snapcrack/all-the-news).
+
+The tf-idf model was trained using the [Sklearn TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text) library on the articles datasets from [https://www.kaggle.com/datasets/snapcrack/all-the-news](https://www.kaggle.com/datasets/snapcrack/all-the-news).
 ---
+
+The script for training is located on [app/models/training.py](app/models/training.py).
+
 **NOTE**
-
-It is very important that the datasets are in the [/app/models/data](/app/models/data) folder before running the [/app/models/traning.py](/app/models/traning.py) script.
-
+It is very important that the datasets are in the [app/models/data](app/models/data) folder before running the [app/models/traning.py](app/models/traning.py) script.
 ---
+
+After the articles datasets are stored in [app/models/data](app/models/data), got to [app/](app/) and run
+```bash
+python models/training.py
+```
+It will generate two files in the folder [app/models/](app/models/)], `tf_idf` and `vectorizer`, the models.
+
 ## Tests <a name="tests"></a>
+
 Go to the root folder [/](/) and run
 ```bash
 py.test
 ```
 
 ## Run application locally <a name="running"></a>
+
 Go to the root folder [app/](app/) and run
 ```
 flask run
@@ -127,6 +139,7 @@ then, the flask server should be running on [http://127.0.0.1:5000](http://127.0
 
 
 ## References <a name="references"></a>
+
  - [Flask](https://flask.palletsprojects.com/en/2.1.x/)
  - [Sklearn TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)
  - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
