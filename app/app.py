@@ -15,7 +15,7 @@ def tfidf():
     article_url = request.args.get('url', None)
     limit = request.args.get('limit', None)
     if not article_url or not limit:
-        return jsonify({'error': 'Invalid URL: Missing parameters'}), 400
+        return jsonify({'error': 'Invalid URL'}), 400
     current_dir = os.path.dirname(os.path.realpath(__file__))
     # Scrapping the article
     scrapper = Scrapper()
