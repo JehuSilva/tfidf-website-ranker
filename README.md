@@ -3,7 +3,14 @@ This application receive and url and returns the terms with the highest TF-IDF o
 
 This application was developed using Flask and is supported by two important topics, the web scraper and the tfidf model. The web scraper takes and url and returns the text of the entire page while the tf-idf model is used to calculate the tf-idf features for the article.
 
-The tf-idf model was trained using a large dataset of newspaper articles that falls between the years of 2016 and July 2017. You can download the articles datasets from here [https://www.kaggle.com/datasets/snapcrack/all-the-news](https://www.kaggle.com/datasets/snapcrack/all-the-news).
+The tf-idf model was trained using the [sklearn TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) on a large dataset of newspaper articles that falls between the years of 2016 and July 2017. You can download the articles datasets from [https://www.kaggle.com/datasets/snapcrack/all-the-news](https://www.kaggle.com/datasets/snapcrack/all-the-news).
+
+---
+**NOTE**
+
+It works with almost all markdown flavours (the below blank line matters).
+
+---
 
 ```mermaid
 graph LR
@@ -100,3 +107,10 @@ flask run
 ```
 then, the flask server should be running on [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
+
+
+## References
+ - [Flask](https://flask.palletsprojects.com/en/2.1.x/)
+ - [Sklearn TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)
+ - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+ - [TF(Term Frequency)-IDF(Inverse Document Frequency) from scratch in python.](https://towardsdatascience.com/tf-term-frequency-idf-inverse-document-frequency-from-scratch-in-python-6c2b61b78558)
