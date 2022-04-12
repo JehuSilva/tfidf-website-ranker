@@ -107,12 +107,14 @@ pip install -r requirements.txt
 ## Training <a name="training"></a>
 
 The tf-idf model was trained using the [Sklearn TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text) library on the articles datasets from [https://www.kaggle.com/datasets/snapcrack/all-the-news](https://www.kaggle.com/datasets/snapcrack/all-the-news).
----
 
 The script for training is located on [app/models/training.py](app/models/training.py).
 
+---
 **NOTE**
+
 It is very important that the datasets are in the [app/models/data](app/models/data) folder before running the [app/models/traning.py](app/models/traning.py) script.
+
 ---
 
 After the articles datasets are stored in [app/models/data](app/models/data), got to [app/](app/) and run
