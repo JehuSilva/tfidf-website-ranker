@@ -5,12 +5,6 @@ This application was developed using Flask and is supported by two important top
 
 The tf-idf model was trained using the [sklearn TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) on a large dataset of newspaper articles that falls between the years of 2016 and July 2017. You can download the articles datasets from [https://www.kaggle.com/datasets/snapcrack/all-the-news](https://www.kaggle.com/datasets/snapcrack/all-the-news).
 
----
-**NOTE**
-
-It works with almost all markdown flavours (the below blank line matters).
-
----
 
 ```mermaid
 graph LR
@@ -18,6 +12,10 @@ A(Client) -- http Request --> B(Flask App)
 B(Flask App) --> C(Web Scraper)
 B(Flask App) --> D(TF-IDF Model)
 ```
+## Table of contents  
+[TF-IDF endpoint](##tfidfendpoint)  
+[Success Response](##SuccessResponse)  
+[Build](##build) 
 ## TF-IDF endpoint
 
  Used to retrieve the terms with the highest TF-IDF on the page.
@@ -94,6 +92,13 @@ after the environment is builded and activated, install the python packages
 ```
 pip install -r requirements.txt
 ```
+
+---
+**NOTE**
+
+It is very important that the datasets are in the [/app/models/data](/app/models/data) folder before running the [/app/models/traning.py](/app/models/traning.py) script.
+
+---
 ## Running tests
 Go to the root folder [/](/) and run
 ```bash
