@@ -1,12 +1,15 @@
 # Graphite test project
 This application receive and url and returns the terms with the highest TF-IDF on the web page.
 
+This application was developed using Flask and is supported by two important topics, the web scraper and the tfidf model. The web scraper takes and url and returns the text of the entire page while the tf-idf model is used to calculate the tf-idf features for the article.
+
+The tf-idf model was trained using a large dataset of newspaper articles that falls between the years of 2016 and July 2017. You can download the articles datasets from here [https://www.kaggle.com/datasets/snapcrack/all-the-news](https://www.kaggle.com/datasets/snapcrack/all-the-news).
 
 ```mermaid
 graph LR
 A(Client) -- http Request --> B(Flask App)
-B(Flask App) --> C(Scraper)
-B(Flask App) --> D(IF-IDF Model)
+B(Flask App) --> C(Web Scraper)
+B(Flask App) --> D(TF-IDF Model)
 ```
 ## TF-IDF endpoint
 
@@ -18,7 +21,7 @@ B(Flask App) --> D(IF-IDF Model)
 
 **Auth required** : NO
 
-**Data constraints**
+**Parameters constraints**
 
 ```json
 {
@@ -27,7 +30,7 @@ B(Flask App) --> D(IF-IDF Model)
 }
 ```
 
-**Data example**
+**Parameters example**
 
 ```json
 {
