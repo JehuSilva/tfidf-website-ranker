@@ -3,6 +3,7 @@
 - [Overview](#overview)
 - [TF-IDF endpoint](#tfidfendpoint)
 - [Installation](#installation)
+- [Training](#training)
 - [Tests](#tests)
 - [Run application locally](#running)
 - [References](#references)
@@ -13,12 +14,12 @@ This application receive and url and returns the terms with the highest TF-IDF o
 
 This application was developed using Flask and is supported by two important topics, the web scraper and the tfidf model. The web scraper takes and url and returns the text of the entire page while the tf-idf model is used to calculate the tf-idf features for the article.
 
-The tf-idf model was trained using the [sklearn TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) on a large dataset of newspaper articles that falls between the years of 2016 and July 2017. You can download the articles datasets from [https://www.kaggle.com/datasets/snapcrack/all-the-news](https://www.kaggle.com/datasets/snapcrack/all-the-news).
+The tf-idf model was trained using the [sklearn TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) on a large dataset of newspaper articles that falls between the years of 2016 and July 2017.
 
-
+The following graphic shows the components of the application.
 ```mermaid
 graph LR
-A(Client) -- http Request --> B(Flask App)
+A(Client) -- http request --> B(Flask App)
 B(Flask App) --> C(Web Scraper)
 B(Flask App) --> D(TF-IDF Model)
 ```
@@ -75,7 +76,7 @@ B(Flask App) --> D(TF-IDF Model)
 
 ### Error Response
 
-**Condition** : If 'username' and 'password' combination is wrong.
+**Condition** : If 'url' and 'limit' combination is wrong.
 
 **Code** : `400 BAD REQUEST`
 
@@ -101,6 +102,9 @@ after the environment is builded and activated, install the python packages
 pip install -r requirements.txt
 ```
 
+## Training <a name="training"></a>
+The training 
+You can download the articles datasets from [https://www.kaggle.com/datasets/snapcrack/all-the-news](https://www.kaggle.com/datasets/snapcrack/all-the-news).
 ---
 **NOTE**
 
