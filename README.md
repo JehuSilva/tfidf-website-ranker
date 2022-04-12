@@ -2,7 +2,7 @@
 ## Table of contents  
 - [Overview](#overview)
 - [TF-IDF endpoint](#tfidfendpoint)
-- [Installation](#build)
+- [Installation](#installation)
 - [Tests](#tests)
 - [Run application locally](#running)
 - [References](#references)
