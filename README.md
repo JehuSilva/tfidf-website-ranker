@@ -13,10 +13,16 @@ B(Flask App) --> C(Web Scraper)
 B(Flask App) --> D(TF-IDF Model)
 ```
 ## Table of contents  
-[TF-IDF endpoint](##tfidfendpoint)  
-[Success Response](##SuccessResponse)  
-[Build](##build) 
-## TF-IDF endpoint
+- [TF-IDF endpoint](#tfidfendpoint)
+- [Success Response](#successresponse)
+- [Error response](#errorresponse)
+- [Build](#build)
+- [Running Tests](#tests)
+- [running](#running)
+- [References](#reference)
+
+
+## TF-IDF endpoint <a name="tfidfendpoint"></a>
 
  Used to retrieve the terms with the highest TF-IDF on the page.
 
@@ -44,7 +50,7 @@ B(Flask App) --> D(TF-IDF Model)
 }
 ```
 
-### Success Response
+### Success Response <a name="successresponse"></a>
 
 **Code** : `200 OK`
 
@@ -65,7 +71,7 @@ B(Flask App) --> D(TF-IDF Model)
 }
 ```
 
-### Error Response
+### Error Response <a name="errorresponse"></a>
 
 **Condition** : If 'username' and 'password' combination is wrong.
 
@@ -80,7 +86,7 @@ B(Flask App) --> D(TF-IDF Model)
 ```
 
 
-## Build
+## Build <a name="build"></a>
 This project is developed using [python3.8](https://www.python.org/downloads/release/python-380/).
 
 First, you should create an isolate python environment
@@ -99,13 +105,13 @@ pip install -r requirements.txt
 It is very important that the datasets are in the [/app/models/data](/app/models/data) folder before running the [/app/models/traning.py](/app/models/traning.py) script.
 
 ---
-## Running tests
+## Running tests <a name="tests"></a>
 Go to the root folder [/](/) and run
 ```bash
 py.test
 ```
 
-## Run application locally
+## Run application locally <a name="running"></a>
 Go to the root folder [app/](app/) and run
 ```
 flask run
@@ -114,7 +120,7 @@ then, the flask server should be running on [http://127.0.0.1:5000](http://127.0
 
 
 
-## References
+## References <a name="reference"></a>
  - [Flask](https://flask.palletsprojects.com/en/2.1.x/)
  - [Sklearn TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)
  - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
