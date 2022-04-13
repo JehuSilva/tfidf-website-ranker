@@ -91,7 +91,7 @@ B(Flask App) --> D(TF-IDF Model)
 
 ## Build <a name="build"></a>
 
-This project is developed using [python3.8](https://www.python.org/downloads/release/python-380/).
+This project is developed using [python3.8](https://www.python.org/downloads/release/python-380/) on Ubuntu 20.04 LTS and it depends of [virtualenv](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/) to create virtual environments.
 
 The [build.sh](build.sh) file have the commands for unpacking the model, build the python environment and installing dependencies. You can use as follows
 ```bash
