@@ -132,7 +132,7 @@ py.test
 
 ## Run application locally <a name="running"></a>
 
-Go to the root folder [app/](app/) and run
+Go to the [app/](app/) folder and run
 ```
 flask run
 ```
