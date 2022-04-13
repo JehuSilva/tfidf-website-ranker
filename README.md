@@ -11,9 +11,9 @@
 
 ## Overview <a name="overview"></a>
 
-This application receive and url and returns the terms with the highest TF-IDF on the web page.
+This application receive and url and returns the terms with the highest TF-IDF on a web page.
 
-This application was developed using Flask and is supported by two important topics, the web scraper and the tfidf model. The web scraper takes and url and returns the text of the entire page while the tf-idf model is used to calculate the tf-idf features for the article.
+This application was developed using [Flask](https://flask.palletsprojects.com/en/2.1.x/) and is supported by two important topics, an web scraper and a tfidf model. The web scraper takes and url and returns the text of the entire page while the tf-idf model takes the returned text and calculate the tf-idf features from it.
 
 The tf-idf model was trained using the [sklearn TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) on a large dataset of newspaper articles that falls between the years of 2016 and July 2017.
 
@@ -34,7 +34,7 @@ B(Flask App) --> D(TF-IDF Model)
 
 **Method** : `GET`
 
-**Auth required** : NO
+**Auth required** : No
 
 **Parameters constraints**
 
@@ -77,7 +77,7 @@ B(Flask App) --> D(TF-IDF Model)
 
 ### Error Response
 
-**Condition** : If 'url' and 'limit' combination is wrong.
+**Condition** : If 'url' and 'limit' are not provided.
 
 **Code** : `400 BAD REQUEST`
 
@@ -94,12 +94,12 @@ B(Flask App) --> D(TF-IDF Model)
 
 This project is developed using [python3.8](https://www.python.org/downloads/release/python-380/).
 
-The [build.sh](build.sh) file have the commands for building unpacking the model, build the python environment and installing dependencies. You can simple run
+The [build.sh](build.sh) file have the commands for unpacking the model, build the python environment and installing dependencies. You can use as follows
 ```bash
 sudo chmod +x build.sh
 ./build.sh
 ```
-or doing it manually you can follow the next steps
+or do it manually you can execute the following commands
 ```bash
 # Commands for unpacking the model
 unzip app/models/models.zip -d app/models
@@ -113,25 +113,27 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+---
+**NOTE**
+
+For the next steps keep the python environment activated.
+
+---
+
 ## Training <a name="training"></a>
 
 The tf-idf model was trained using the [Sklearn TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text) library on the articles datasets from [https://www.kaggle.com/datasets/snapcrack/all-the-news](https://www.kaggle.com/datasets/snapcrack/all-the-news).
 
-The script for training is located on [app/models/training.py](app/models/training.py).
-
----
-**NOTE**
-
-It is very important the datasets are stored in the [app/models/data](app/models/data) folder before running the [app/models/traning.py](app/models/traning.py) script.
-
----
-
-After the articles datasets are stored in [app/models/data](app/models/data),  run
+The [app/models/training.py](app/models/training.py) script contains the code with which the model was generated and you can retrain the model by running the following command:
 ```bash
 python app/models/training.py
 ```
-It will generate two files in the folder [app/models/](app/models/)], `tf_idf` and `vectorizer`, the models.
+---
+**NOTE**
 
+It is very important to check that the article datasets are stored in the [app/models/data](app/models/data) folder before starting the training.
+
+---
 ## Tests <a name="tests"></a>
 
 Top run the test just run
