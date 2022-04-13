@@ -11,9 +11,9 @@
 
 ## Overview <a name="overview"></a>
 
-This application receive and url and returns the terms with the highest TF-IDF on a web page.
+This application receive a url and returns the terms with the highest TF-IDF on a web page.
 
-The application was developed using [Flask](https://flask.palletsprojects.com/en/2.1.x/) and is supported by two important features, an web scraper and a tfidf model. The web scraper takes and url and returns the text of the entire page while the tf-idf model takes the returned text and calculate the tf-idf features from it.
+The application was developed using [Flask](https://flask.palletsprojects.com/en/2.1.x/) and is supported by two important features, a web scraper and a tfidf model. The web scraper takes and url and returns the text of the entire page while the tf-idf model takes the returned text and calculate the tf-idf features from it.
 The tf-idf model was trained using the [sklearn TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) on a large dataset of newspaper articles that falls between the years of 2016 and July 2017.
 
 The following graphic shows the application components.
