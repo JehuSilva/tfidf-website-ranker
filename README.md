@@ -1,4 +1,4 @@
-# Graphite test project
+# Graphite project
 ## Table of contents  
 
 - [Overview](#overview)
@@ -136,7 +136,7 @@ It is very important to check that the article datasets are stored in the [app/m
 ---
 ## Tests <a name="tests"></a>
 
-Top run the test just run
+To test the endpoint just run
 ```bash
 py.test
 ```
@@ -156,4 +156,4 @@ then, the flask server should be running on [http://127.0.0.1:5000](http://127.0
  - [Flask](https://flask.palletsprojects.com/en/2.1.x/)
  - [Sklearn TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)
  - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
- - [TF(Term Frequency)-IDF(Inverse Document Frequency) from scratch in python.](https://towardsdatascience.com/tf-term-frequency-idf-inverse-document-frequency-from-scratch-in-python-6c2b61b78558)
+ - [TF(Term Frequency)-IDF(Inverse Document Frequency) in python.](https://towardsdatascience.com/tf-term-frequency-idf-inverse-document-frequency-from-scratch-in-python-6c2b61b78558)
