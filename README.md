@@ -147,7 +147,10 @@ Go to the [app/](app/) folder and run
 ```
 flask run
 ```
-then, the flask server should be running on [http://127.0.0.1:5000](http://127.0.0.1:5000)
+then, the flask server should be running on [http://127.0.0.1:5000](http://127.0.0.1:5000). You can use the endpoint with the following command:
+```bash
+curl --request GET 'http://127.0.0.1:5000/tfidf?url=https://en.wikipedia.org/wiki/Donald_Trump&limit=2'
+```
 
 
 
