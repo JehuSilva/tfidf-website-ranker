@@ -13,6 +13,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 current_dir = os.path.dirname(os.path.realpath(__file__))
 # Reading articles
 try:
+    print('Loading articles...')
     df1 = pd.read_csv(current_dir+"/data/articles1.csv")
     df2 = pd.read_csv(current_dir+"/data/articles2.csv")
     df3 = pd.read_csv(current_dir+"/data/articles3.csv")
@@ -26,7 +27,8 @@ df = pd.concat([df1, df2, df3])['content']
 # train = df[msk]
 # test = df[~msk]
 
-print(f'Dataset contains {len(df)} articles')
+print(f'The model will be trained with {len(df)} articles')
+
 
 
 # tfidf calulation
@@ -39,8 +41,9 @@ vectorizer = TfidfVectorizer(
     smooth_idf=True,        # Prevents divide-by-zero errors
     encoding='utf-8'        # If bytes or files are given to analyze, this encoding is used to decode.
 )
+print('Training the model...')
 tf_idf = vectorizer.fit_transform(df)
-
+print('Model trained')
 # Save objects on filesystem
 print('Saving objects on filesystem')
 pickle.dump(vectorizer, open(current_dir+'/vectorizer', 'wb')) 
