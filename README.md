@@ -3,7 +3,7 @@
 
 - [Overview](#overview)
 - [TF-IDF endpoint](#tfidfendpoint)
-- [Installation](#installation)
+- [Build](#build)
 - [Training](#training)
 - [Tests](#tests)
 - [Run application locally](#running)
@@ -90,17 +90,26 @@ B(Flask App) --> D(TF-IDF Model)
 ```
 
 
-## Installation <a name="installation"></a>
+## Build <a name="build"></a>
 
 This project is developed using [python3.8](https://www.python.org/downloads/release/python-380/).
 
-First, you should create an isolate python environment
+The [build.sh](build.sh) file have the commands for building unpacking the model, build the python environment and installing dependencies. You can simple run
 ```bash
+sudo chmod +x build.sh
+./build.sh
+```
+or doing it manually you can follow the next steps
+```bash
+# Commands for unpacking the model
+unzip app/models/models.zip -d app/models
+unzip app/models/datasets.zip -d app/models
+rm -r app/models/models.zip
+rm -r app/models/datasets.zip
+# Commands for building the python environment
 python3 -m venv venv
-source venv/bin/activate #environment activation
-```
-after the environment is builded and activated, install the python packages
-```
+source venv/bin/activate
+# Command for installing dependencies
 pip install -r requirements.txt
 ```
 
