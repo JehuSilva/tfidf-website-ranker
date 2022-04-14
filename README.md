@@ -39,7 +39,7 @@ B(Flask App) --> D(TF-IDF Model)
 
 ```json
 {
-    "url": "Url for the article (string)",
+    "url": "Url of the article (string)",
     "limit": "Limits the top feats to retrieve (integer)"
 }
 ```
