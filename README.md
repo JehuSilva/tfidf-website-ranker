@@ -1,4 +1,4 @@
-# Graphite project
+# Python TF-IDF Website Ranker
 ## Table of contents  
 
 - [Overview](#overview)
