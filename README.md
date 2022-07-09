@@ -121,18 +121,11 @@ For the next steps keep the python environment activated.
 
 ## Training <a name="training"></a>
 
-The tf-idf model was trained using the [Sklearn TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text) library on the articles datasets from [https://www.kaggle.com/datasets/snapcrack/all-the-news](https://www.kaggle.com/datasets/snapcrack/all-the-news).
-
-The [app/models/training.py](app/models/training.py) script contains the code with which the model was generated and you can retrain the model by running the following command:
+The [app/models/training.py](app/models/training.py) script contains the code with which the model can be trained. To start the training just run the following command:
 ```bash
 python app/models/training.py
 ```
----
-**NOTE**
 
-It is very important to check that the article datasets are stored in the [app/models/data](app/models/data) folder before starting the training.
-
----
 ## Tests <a name="tests"></a>
 
 To test the endpoint just run
